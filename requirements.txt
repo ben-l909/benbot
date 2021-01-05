@@ -1,4 +1,3 @@
-git+https://github.com/Rapptz/discord.py@7f4c57dd5ad20b7fa10aea485f674a4bc24b9547
 aiohttp==2.3.6
 beautifulsoup4
 bs4
@@ -19,3 +18,4 @@ urbandict
 urllib3
 websockets
 wikipedia
+discord.py
