@@ -18,4 +18,4 @@ urbandict
 urllib3
 websockets
 wikipedia
-discord.py
+discord.py>=1.0.1
