@@ -38,8 +38,8 @@ from pathlib import Path
 
 __version__ = '0.05.1'  # first int is main, second is stable, third is working release [0.00.0]
 dev_list = [
-    ('WebKide', 323578534763298816),
-    ('Kybre', 325012556940836864)
+    ('Ben-l909', 323578534763298816),
+    ('ffsx', 325012556940836864)
 ]
 status_loop_channel = 545719518903926807  # status-loop channel in dev-server
 activity_list = ['you', 'this server', 'everything', 'new members', 'Anime', 'hentai', 'yo mama']
@@ -66,8 +66,8 @@ class ModBot(commands.Bot):
     # +------------------------------------------------------------+
     def __init__(self, **attrs):
         self.description = f'|⌄| _  _||_  _ |_ ™\n| |(_)(_||_)(_)⎩_ v.{__version__}\n\n{__notes__}'
-        self.ownerID = 323578534763298816
-        super().__init__(command_prefix=commands.when_mentioned_or('botto ', '.', 'modbot '),
+        self.ownerID = 333148363954585602
+        super().__init__(command_prefix=commands.when_mentioned_or('-', '.', 'benbot'),
                          description=self.description, owner_id=self.ownerID, **attrs)
         self.add_command(self.ping)
         self.add_command(self.about)
@@ -228,7 +228,7 @@ class ModBot(commands.Bot):
         except discord.Forbidden:  # FORBIDDEN (status code: 403): Missing Permissions
             await ctx.send(pong)
 
-    @commands.command(description='Modbot, a bot developed by WebKide', aliases=['bot', 'botto', 'info', 'invite'])
+    @commands.command(description='Modbot, a bot developed by Ben', aliases=['bot', 'botto', 'info', 'invite'])
     async def about(self, ctx):
         """ ✔ Modbot info page """
         g = ctx.guild
@@ -291,13 +291,13 @@ class ModBot(commands.Bot):
             e.description = d
 
             e.add_field(name='<:evilmorty:540582117307056147> Bot Author',
-                        value='[WebKide](https://github.com/webkide)')
+                        value='[Ben](https://github.com/ben-l909)')
 
             e.add_field(name='<:Heart:525716509830414347> Bot Uptime',
                         value=f'`{up_time}`')
 
             e.add_field(name='<:Terminal:527401285754814474> Bot Source',
-                        value='[Github](https://github.com/webkide/modbot/) | [GitLab](https://gitlab.com/webkide)')
+                        value='[Github](https://github.com/ben-l909/benbot/) | [GitLab](https://gitlab.com/ben-l909)')
 
             e.add_field(name='<:zoomeyes:492155933263396865> Protecting',
                         value=f'`{len(b.guilds)}` guild(s)\n`{total_unique}` members\n'
